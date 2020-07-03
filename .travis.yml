@@ -2,5 +2,5 @@ language: java
 install: mvn package
 deploy:
   provider: heroku
-  api_key: {{ secrets.HEROKU_API_KEY }}
+  api_key: 3ea5ed64-9da7-448f-9297-f0ba06c4ad97
   master: aditihelloapp
