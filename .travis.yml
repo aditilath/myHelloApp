@@ -5,3 +5,4 @@ deploy:
   api_key: "3ea5ed64-9da7-448f-9297-f0ba06c4ad97"
   app:
     master: aditihelloapp
+    test: aditihellotestapp
