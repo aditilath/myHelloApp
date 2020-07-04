@@ -3,7 +3,7 @@ install: mvn package
 addons:
   sonarcloud:
     organization: sonarkeyauth
-    token: 1897fd76de101613ada8a2eec90ae770924d7321
+    token: SONAR_TOKEN
 script:
 - sonar-scanner
 deploy:
