@@ -2,14 +2,16 @@ language: java
 install: mvn package
 addons:
   sonarcloud:
-    organization: sonarkeyauth
-    token: SONAR_TOKEN
+    organization: "sonarkeyauth"
+    token:
+      secure: N0xXaubEKSOs1Kt7tIO1DiuFGPRjk2BQXfgh63CnuArtT6SboDDwnBGy1yRQ761Edimn0P+zq/+BhariLPU1Gtfg1Lwu9N/Wc2DDg2YGUndR8mABbjdyJbzMv9O9GeojD1uG8Zt7j1UXcLmmZmlhYkRwbTlPeAvbFwIB12GaTpmp8FMNEp/1CyAQ8nAaiLf4YQZiGTmzpDwF31J290PJ17bu6u4pzTwsITWlroYmv5jFWNYiivsM2e13Ko88NbOkxYCbMtLghJqWVkLEflrMGBULv9djCqSzjs0wCE9mlA8OC2fj42cOGfsWRb5H3LlIC8/gIsGI54AgNxIauM5wpPHaspUhJAVSlce1jHn5dZhq8ckFx9x9Q1kFpkLYd/k5qWvpzwh8TAtKGmQxEknFW/PPBSIx/ILdQkB0Yb07Ul7Wj9XCiOFwRzbLyHj/FYqq/HAHE2ZTBdBGcYyO/xB1G77Naiyq+oAjqIpurrlBbFwbpjJuc5D3rKosqxnoFe2Lf3wH/+IGye3DpmjJsZc2uDVa7lxxssH+cPnDQMfHvEdxNAXgzXFu93nInDScKzMkXBCSPIHzABKglbNrllelVlazLTQIxRV3Vvf257tj0501G4AdMjMdSkpOWvV9ovJrujykJPnVXaZFLYcmBxGLo6IE2oz2vug0b6MhVCK1TPs=
 script:
-- sonar-scanner
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
 deploy:
   provider: heroku
   api_key:
-    secure: HEROKU_API_KEY
+    secure: AX//Idoti1VGhI0/uIUD4GUtNcagQ+Mc0NO3QW8tHccDZmIcJwOX7T57PyeDtIIXvhw6d1Mc4jvylcaliEbCakmK9h9gd0dky4s9/0kJ9LRUvLKzNQl0xvTlArAtb59vP40v+kjTIY63LUNDQ2s/ix2fbn8bUt8po87hCypkLsZzwU8WfQIwWJ+RJUml/TFVH99LPXl2b/G7MIEFQkDcojJkRNAqycGN7YkHflDT/7cfNidcPwYtn5TzIRNGv17E5+wimRAIWFXU2uVQw/kFgsSvJIdcLvdvpBslOgG9IY86/bdJLgcCzk3B5i/4IHZ/EjhNyRFtr7BWAUMPVI1TOKeALaWhhvRUVc5IirKO6sfp7iVULvCqwJ09Z20Y0N0GvgFmeO9THMvr7YhyUfPkwEV6OG7ceDFT4lEi5SPMZV+8e0fzHXzc9ogznDP+KvVR9uwKB2KTofvfUjAA/v1PcL6M2gW75cGfPZemn7Xap/1xx+2CnGXXm5+PehMDq0RQ4LJiwgCPZMjaSO9KGtDf/DAgFzGugnVqK9jcB/zi0YwhbriU7pz9d4k67Hish7YY4QpmCk6KRDoetjiI/sLYZX6aFBGsULImfXtsKv9tV9Xy365eQSeDrjF4/zC4owR4H7vbYM38eLDUh9/N6iY8hxgscSjjcgOWbSYs2xdz48I=
   app:
     master: aditihelloapp
     test: aditihellotestapp
