@@ -1,11 +1,5 @@
 language: java
 install: mvn package
-deploy:
-  provider: heroku
-  api_key: "3ea5ed64-9da7-448f-9297-f0ba06c4ad97"
-  app:
-    master: aditihelloapp
-    test: aditihellotestapp
 addons:
   sonarcloud:
     organization: "sonarkeyauth"
@@ -13,3 +7,9 @@ addons:
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - sonar-scanner
+deploy:
+  provider: heroku
+  api_key: "3ea5ed64-9da7-448f-9297-f0ba06c4ad97"
+  app:
+    master: aditihelloapp
+    test: aditihellotestapp
