@@ -1,4 +1,3 @@
-<!DOCTYPE>
 <html lang="en">
     <head>
           <title>Aditi Demo App</title>
