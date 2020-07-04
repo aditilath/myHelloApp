@@ -1,2 +1,2 @@
 # myHelloApp
-This is a demo app 
+This is a demo java app 
