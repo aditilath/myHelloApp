@@ -9,7 +9,7 @@ deploy:
 addons:
   sonarcloud:
     organization: "sonarkeyauth"
-    token: "CWgNc8-WJ-IwBC2jLceXfQ"
+    token: "1897fd76de101613ada8a2eec90ae770924d7321"
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - sonar-scanner
