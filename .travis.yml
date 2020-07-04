@@ -6,3 +6,10 @@ deploy:
   app:
     master: aditihelloapp
     test: aditihellotestapp
+  addons:
+    sonarcloud:
+      organization: "sonarkeyauth"
+      token: "CWgNc8-WJ-IwBC2jLceXfQ"
+    script:
+    # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+    - sonar-scanner
