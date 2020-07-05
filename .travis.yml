@@ -5,11 +5,11 @@ addons:
     organization: sonarkeyauth
     token: "1897fd76de101613ada8a2eec90ae770924d7321"
 script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner
+- sonar-scanner
 deploy:
   provider: heroku
-  api_key: "3ea5ed64-9da7-448f-9297-f0ba06c4ad97"
+  api_key:
+    secure: "ZA+dTwtoySReXbdvCJ49R2SN/30pXWAKcB2Fr1z6drjk0tx0LuWHJT1Ikh77AI64LKsqTBoVH5AccsKxrR5zXsAJhY+dn/w0F/5XW1PjS/e60VoR+Unzs+v1PaIGhulGR9xNcpL2NmpvcsB1Xn7AvrfsewoMrs01jQOn/tViXzSBYyQoTUh6+X+BbC68KIYakAvaehBo9c4ticrpP125hJgNprE8P4bBaCEK2UV5Cp7ghmwdBUXtEW4w9bG1RNXxoTwOf0M0SUXzqqCUS4TUmjPLu/+WBJuPnrbA14nNBNIFYjVdAazaYKStLFXAt10/N6Rb1C1br1Ydr8imjpgd5Xhb+46vkmjzi7z6l6XwsfD5Pic3XmL5fuV0d2/O/AZOtQpnw22BfRnCOrfDhYir2JzT3hohNPYCJ9y3kW082m/TaOR3wRPbqkQtVFRnVmA+tiSq+ixY/TmpXBGuj6Va/DaFSU1AgTPtX5ybuQg2JzT5Dnu4TGNCl7CAjUri1oHuyMYivNY5IzcdApzeDaZEf1JEK8Le28eZV1oe+ODFr/971LKWCzY2TD52G69EBMVkVimV/d1aUBZO5RrtQtuLDKkFUJYjxCvhSyfAcfuIt1NrInUnk3fIlAm7iq7dqjpkx9UD6Ti2IYA8szifiwasZM+AgjoztBNmYY6c8nZfVaM="
   app:
     master: aditihelloapp
     test: aditihellotestapp
