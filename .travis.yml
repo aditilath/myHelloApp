@@ -3,12 +3,12 @@ install: mvn package
 addons:
   sonarcloud:
     organization: sonarkeyauth
-    token: "1897fd76de101613ada8a2eec90ae770924d7321"
+    token: $SONAR_TOKEN
 script:
 - sonar-scanner
 deploy:
   provider: heroku
-  api_key: "79805b4b-a06b-4af5-8a94-06b4c65870ba"
+  api_key: $HEROKU_API_KEY
   app:
     master: aditihelloapp
     test: aditihellotestapp
