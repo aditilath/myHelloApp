@@ -14,3 +14,7 @@ upload_files() {
   git remote add target https://$GITHUB_TOKEN@github.com/myHelloApp/resources.git > /dev/null 2>&1
   git push --quiet --set-upstream origin-pages gh-pages
 }
+
+setup_git
+commit_files
+upload_files
