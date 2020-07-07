@@ -11,8 +11,7 @@ commit_files() {
 }
 
 upload_files() {
-  git remote add target https://$GITHUB_TOKEN@github.com/myHelloApp/resources.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages
+  git push origin $TRAVIS_BRANCH
 }
 
 setup_git
