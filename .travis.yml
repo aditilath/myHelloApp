@@ -12,3 +12,6 @@ deploy:
   app:
     master: aditihelloapp
     test: aditihellotestapp
+notifications: 
+  email: 
+    - aditilath5@gmail.com
